@@ -41,14 +41,14 @@ public class ContentOre extends TinkerPage {
         }
 
         if (description != null && description.length > 0) {
-            list.add(new ElementText(0, 15, GuiBook.PAGE_WIDTH, GuiBook.PAGE_HEIGHT - 15, description));
+            list.add(new ElementText(0, 15, GuiBook.PAGE_WIDTH - 20, GuiBook.PAGE_HEIGHT - 15, description));
         }
 
         int h = GuiBook.PAGE_WIDTH / 3 - 10;
         if (informations != null && informations.length > 0) {
             TextData head = new TextData(parent.translate("modifier.informations"));
             head.underlined = true;
-            list.add(new ElementText(10, 20 + h, GuiBook.PAGE_WIDTH / 2 - 5, GuiBook.PAGE_HEIGHT - h - 20, head));
+            list.add(new ElementText(10, 40 + h, GuiBook.PAGE_WIDTH / 2 - 5, GuiBook.PAGE_HEIGHT - h - 30, head));
 
             List<TextData> effectData = Lists.newArrayList();
             for (String e : informations) {
@@ -57,7 +57,7 @@ public class ContentOre extends TinkerPage {
                 effectData.add(new TextData("\n"));
             }
 
-            list.add(new ElementText(10, 30 + h, GuiBook.PAGE_WIDTH / 2 + 5, GuiBook.PAGE_HEIGHT - h - 20, effectData));
+            list.add(new ElementText(10, 50 + h, GuiBook.PAGE_WIDTH / 2 + 5, GuiBook.PAGE_HEIGHT - h - 20, effectData));
         }
     }
 }
